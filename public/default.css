@@ -1,0 +1,158 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    color: #007BFF;
+    margin-top: 20px;
+}
+
+.exercice-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 20px;
+}
+
+.exercice-context {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.question-question {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.question-pp {
+    margin-bottom: 20px;
+}
+
+.question-pp input[type="radio"] {
+    margin-right: 10px;
+}
+
+.question-pp label {
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+}
+
+.question-indication {
+    background-color: #e7f3fe;
+    border-left: 4px solid #2196F3;
+    padding: 10px;
+    font-style: italic;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.question-answer {
+    margin-top: 0px;
+}
+
+.question-answer p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.question-correction {
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.question-correction[style*="color:green;"] {
+    background-color: #e8f5e9;
+    border-left: 4px solid #4CAF50;
+    color: #2e7d32;
+}
+
+.question-correction[style*="color:orange;"] {
+    background-color: #ffebee;
+    border-left: 4px solid #f4a536;
+    color: #c68f28;
+}
+
+.question-correction[style*="color:red;"] {
+    background-color: #ffebee;
+    border-left: 4px solid #f44336;
+    color: #c62828;
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #0267d3;
+}
+
+/* Additional styles for better spacing and visuals */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.controle{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border: #ccc 1px solid;
+    border-radius: 4px;
+    margin: 5px;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.controle a{
+    border: #007BFF 1px solid;
+    border-radius: 4px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin:5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+}
