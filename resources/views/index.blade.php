@@ -50,9 +50,12 @@ body > a {
 <body>
     <div></div>
     <h1>Selection du cours</h1>
-    <a href="{{url('/load/py')}}">Pythagore</a>
-    <a href="{{url('/load/th')}}">Thales</a>
-
+    <a href="{{url('/load/py')}}">THÉORÈME DE PYTHAGORE ET SA RECIPROQUE</a>
+    <a href="{{url('/load/th')}}">THÉORÈME DE THALÈS ET SA RECIPROQUE</a>
+    <a href="{{url('/load/tr')}}">TRIGONOMETRIE</a>
+    <a href="{{url('/load/ts')}}">TRIANGLES SEMBLABLES</a>
+    <a href="{{url('/load/sy')}}">SYMETRIE</a>
+    <a href="{{url('/load/arr')}}">AGRANDISSEMENT, REDUCTION, RETOURNEMENT</a>
 </body>
 
 <script>
