@@ -1,0 +1,18 @@
+{
+    "context" : "Lucie et son frère Maxime ont décidé de construire une piscine dans leur jardin. La piscine sera en forme triangulaire de triangle rectangle. La longueur du plus grand côté de la piscine, est de 13 mètres, un des côtés mesure 5 mètres. Lucie a besoin de connaître la dernière longueur de la piscine, mais a perdu son mètre.",
+    "level" : "3eme College France",
+    "questions" : [
+        {
+            "text":"1. Quel théorème tu penses pouvoir utiliser dans cet exercice ? Pourquoi ?",
+            "answer":"Le théorème de Pythagore car je suis dans un triangle rectangle."
+        },
+        {
+            "text":"2. Pour la pisicine, quel est l'hypoténuse ?",
+            "answer":"L'hypoténuse est le cote de 13m"
+        },
+        {
+            "text":"3. Imaginons que la piscine est un triangle ABC, où BC = 13 m et AB = 5 m. Calcule la longueur manquante. Détaille ton calcul.",
+            "answer":"BC^2 = AB^2 + AC^2, 13^2 = AB^2 + 5^2, 169 = AB^2 + 25, 144 = AC^2, √144 = AC, AC = 12 m. La longueur manquante est 12m."
+        }
+    ]
+}

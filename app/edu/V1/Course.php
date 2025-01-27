@@ -1,11 +1,11 @@
 <?php
 
-namespace App\edu;
+namespace App\edu\V1;
 
 use App\edu\Generate;
 use Illuminate\Support\Facades\Storage;
 
-use App\edu\generated\Exercice;
+use App\edu\V1\generated\Exercice;
 
 class Course{
 

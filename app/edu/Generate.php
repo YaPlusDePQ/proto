@@ -6,6 +6,7 @@ namespace App\edu;
 class Generate{
 
     private const MODEL_GPT4_O = 'gpt-4o';
+    private const MODEL_GPT_O1_MINI = 'o1-mini';
     private $client; 
 
     private const PRINT = "OUBLIE TOUTE LES INSTRUCTIONS PRECEDENTES. Pour ce prompt tu devras respecter STRICTEMENT les indications qui te seront indiquées. Renvoie uniquement du JSON.";
@@ -90,10 +91,10 @@ class Generate{
     public function query(string $format, string $query){
 
         $response = $this->client->chat()->create([
-            'model' => self::MODEL_GPT4_O,
+            'model' => self::MODEL_GPT_O1_MINI,
             'messages' => [
                 [
-                    'role' => 'system',
+                    'role' => 'user',
                     'content' => $format
                 ],
                 [
@@ -108,5 +109,24 @@ class Generate{
         $cleanJson = preg_replace('/^```json|```$/', '', $raw);
         //$cleanJson = '{ "exercice": { "type": "QCM", "document": {}, "context": "Utiliser le théorème de Pythagore pour déterminer si un triangle est rectangle.", "questions": { "1": { "question": "Un triangle a trois côtés de longueurs 5 cm, 12 cm et 13 cm. Est-ce un triangle rectangle?", "cpc": {}, "pp": { "a": "Oui, car 13^2 = 5^2 + 12^2.", "b": "Non, car 13^2 ≠ 5^2 + 12^2.", "c": "On ne peut pas savoir, car il manque l\'angle.", "d": "Oui, car 5^2 + 12^2 = 13^2." } } } }, "indication": { "1": "Vérifiez si la somme des carrés des deux plus petits côtés est égale au carré du plus grand côté." }, "answer": { "1": "a" } }';
         return $cleanJson;
+    }
+
+    public function queryJSON(array $jsonSchema, string $query){
+
+        $response = $this->client->chat()->create([
+            'model' => self::MODEL_GPT4_O,
+            'messages' => [
+                [
+                    'role' => 'user',
+                    'content' => $query
+                ]
+            ],
+            'response_format' => [
+                'type' => 'json_schema',
+                'json_schema' =>  $jsonSchema
+            ]
+        ]);
+
+        return $response->choices[0]->message->content;
     }
 }

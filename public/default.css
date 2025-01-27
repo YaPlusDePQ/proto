@@ -103,7 +103,13 @@ button[type="submit"] {
     cursor: pointer;
     transition: background-color 0.3s;
     margin: auto;
-}
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    outline: none;
+  }
 
 button[type="submit"]:hover {
     background-color: #0267d3;
@@ -156,3 +162,31 @@ input[type="text"]:focus {
     color: #fff;
     background-color: #007BFF;
 }
+
+  .spinner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-top: 2px solid #fff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    display: none;
+  }
+
+  button[type="submit"].loading .spinner {
+    display: block;
+  }
+
+  button[type="submit"].loading span {
+    visibility: hidden;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\edu\generated;
+namespace App\edu\V1\generated;
 
 use Illuminate\Http\Request;
 
-use App\edu\generated\Question;
+use App\edu\V1\generated\Question;
 use App\edu\Generate;
 
 class Exercice{
@@ -75,7 +75,7 @@ class Exercice{
             $buffer .= $q->getHTML($n, $showIndication);
         }
 
-        $buffer .= "<button type='submit'>Verifier</button>";
+        $buffer .= "<button type='submit'><span>Verifier</span><div class='spinner'></div></button>";
 
         $buffer .= "</form>";
 

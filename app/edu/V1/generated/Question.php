@@ -1,6 +1,6 @@
 <?php
 
-namespace App\edu\generated;
+namespace App\edu\V1\generated;
 
 
 

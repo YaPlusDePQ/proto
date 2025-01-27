@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-use App\edu\Course;
+use App\edu\V1\Course;
 use App\edu\Generate;
 
 
@@ -36,17 +36,17 @@ class DemoController extends Controller
         $all = $exercices;
         array_push( $all, $exemple);
 
-        Session::put('course', $course );
-        Session::put('exemple', $exemple );
-        Session::put('exercices', $exercices );
-        Session::put('all', $all);
+        Session::put('V1course', $course );
+        Session::put('V1exemple', $exemple );
+        Session::put('V1exercices', $exercices );
+        Session::put('V1all', $all);
 
         return redirect('/print');
     }
 
     public static function correct(Request $request){
         $client =new Generate();
-        $all = session('all');
+        $all = session('V1all');
 
         foreach($all as $e){
             if(strcmp($e->name, $request->id) == 0){
@@ -61,9 +61,9 @@ class DemoController extends Controller
     public static function print(){
         
         return view('default', [
-            'course'=> session('course'),
-            'exemple'=>session('exemple'),
-            'exercices'=>session('exercices'),
+            'course'=> session('V1course'),
+            'exemple'=>session('V1exemple'),
+            'exercices'=>session('V1exercices'),
         ]);
     }
 }
